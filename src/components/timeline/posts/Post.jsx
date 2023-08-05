@@ -7,18 +7,18 @@ import ChatBubbleOutlineIcon from '@mui/icons-material/ChatBubbleOutline';
 import TelegramIcon from '@mui/icons-material/Telegram';
 import BookmarkBorderIcon from '@mui/icons-material/BookmarkBorder';
 
-const Post = () => {
+const Post = ({user, postImage, likes, timestamp}) => {
     return (
         <div className="post">
             <div className="post__header">
                 <div className="post_headerAuthor">
-                    <Avatar>R</Avatar>
-                    akhila_ • <span>12hr</span>
+                    <Avatar>{user.charAt(0).toUpperCase()}</Avatar>
+                    <h4 className="user">{user}</h4> • <span>{timestamp}</span>
                 </div>
                 <MoreHorizOutlinedIcon />
             </div>
             <div className="post__image">
-                <img src="https://static.photocdn.pt/images/articles/2018/12/05/articles/2017_8/beginner_photography_mistakes-1.webp" alt="" />
+                <img src={postImage} alt="" />
 
             </div>
             <div className="post__footer">
@@ -32,7 +32,7 @@ const Post = () => {
                         <BookmarkBorderIcon className="postIcon" />
                     </div>
                 </div>
-                Liked by 21 people.
+                Liked by {likes} people.
             </div>
         </div>
     )

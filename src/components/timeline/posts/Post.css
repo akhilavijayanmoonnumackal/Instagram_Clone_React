@@ -21,6 +21,7 @@
 .post_headerAuthor > span {
     color: gray;
     font-size: 15px;
+    margin-left: 4px;
 }
 
 .post__image > img {
@@ -48,4 +49,8 @@
 
 .postIcon:hover {
     cursor: pointer;
+}
+
+.user {
+    margin-left: 10px;
 }
